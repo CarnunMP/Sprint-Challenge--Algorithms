@@ -96,7 +96,28 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
-        # Fill this out
+        # Okay. I'm thinking a modified _insertion sort_ should do the trick!
+        # The robot's light can be used to keep track of the 'state' of the robot,
+        # whether it's in 'comparison' or 'swapping' mode.
+
+        # Comparison mode (light OFF):
+        # 1) Starting out in position 0 and comparison mode (light OFF),
+        # 2) move right.
+        # 2.5) If you can't move right, END.
+        # 3) Swap with the item in front (pick it up)
+        # 4) Move left.
+        # 5) Compare the item.
+        # 6) If the held item's value is greater or equal, move right and enter swapping mode (light ON)
+        # 7) Else, attempt to move left.
+        #   8) If can't move left, enter swapping mode.
+        #   9) Else, go to (6)
+
+        # Swapping mode (light ON):
+        # 10) Swap.
+        # 11) Compare.
+        # 12) If compare returns None, exit swapping mode (light OFF, go to (1))
+        # 13) Else, move right.
+        # 14) Go to (10)
         pass
 
 
